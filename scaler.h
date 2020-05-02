@@ -1,9 +1,10 @@
- class scaler
+#include <vector>
+class scaler
 {
     public:
     scaler() = delete;
     scaler(int min, int max,int iterations){
-        int minsize = std::floor((max-min)/iterations);
+        int minsize = s(max-min)/iterations;
         for(int i= 0;i<iterations;i++)
             container_.push_back(min+minsize);
         for(int i= 0;i<(max-min)%iterations;i++)
